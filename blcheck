@@ -203,7 +203,7 @@
 
     # Define spinner
     #SPINNER="-\|/"
-    SPINNER=".oO@*"
+    #SPINNER=".oO@*"
     #SPINNER="▉▊▋▌▍▎▏▎▍▌▋▊▉"
     #SPINNER="←↖↑↗→↘↓↙"
     #SPINNER="▁▂▃▄▅▆▇█▇▆▅▄▃▁"
@@ -212,7 +212,7 @@
     #SPINNER="◢◣◤◥"
     #SPINNER="◰◳◲◱"
     #SPINNER="◴◷◶◵"
-    #SPINNER="◐◓◑◒"
+    SPINNER="◐◓◑◒"
 
 
 #~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ }
