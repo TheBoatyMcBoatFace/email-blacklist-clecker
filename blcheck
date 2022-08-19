@@ -2,7 +2,7 @@
 #
 # MIT License
 #
-# Copyright (c) Intellex 2015
+# Copyright (c) The Boaty McBoatface 2022
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -21,15 +21,15 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-#
+# To-do: add descriptive info here
 # =============================================================================
 #
 # title             : blcheck
 # description       : Test any domain against more then 100 black lists.
-# author            : Intellex
+# author            : The Boaty McBoatface
 # contributors      : Darko Poljak
-# date              : 2016-03-18
-# version           : 0.6.0
+# date              : 2022-08-19
+# version           : 0.8.0
 # usage             : blcheck [options] <domain_or_ip>
 #
 # =============================================================================
@@ -49,15 +49,20 @@
         all.rbl.jp
         all.spam-rbl.fr
         all.spamrats.com
+        auth.spamrats.com
         aspews.ext.sorbs.net
         b.barracudacentral.org
         backscatter.spameatingmonkey.net
         badnets.spameatingmonkey.net
         bb.barracudacentral.org
+        bl.blocklist.de
         bl.drmx.org
         bl.konstant.no
+        bl.nordspam.com
         bl.nszones.com
+        bl.score.senderscore.com
         bl.spamcannibal.org
+        bl.spamcop.net
         bl.spameatingmonkey.net
         bl.spamstinks.com
         black.junkemailfilter.com
@@ -76,6 +81,7 @@
         cidr.bl.mcafee.com
         combined.rbl.msrbl.net
         db.wpbl.info
+        dbl.nordspam.com
         dev.null.dk
         dialups.visi.com
         dnsbl-0.uceprotect.net
@@ -125,6 +131,7 @@
         rbl.efnet.org
         rbl.efnetrbl.org
         rbl.iprange.net
+        rbl.mailspike.org
         rbl.schulte.org
         rbl.talkactive.net
         rbl2.triumf.ca
@@ -159,7 +166,8 @@
         work.drbl.gremlin.ru
         wormrbl.imp.ch
         xbl.spamhaus.org
-        zen.spamhaus.org"
+        zen.spamhaus.org
+        	combined.mail.abusix.zone"
 
 
 #~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ }
@@ -186,11 +194,11 @@
     fi
 
     # Define spinner
-    SPINNER="-\|/"
+    #SPINNER="-\|/"
     #SPINNER=".oO@*"
     #SPINNER="▉▊▋▌▍▎▏▎▍▌▋▊▉"
     #SPINNER="←↖↑↗→↘↓↙"
-    #SPINNER="▁▂▃▄▅▆▇█▇▆▅▄▃▁"
+    SPINNER="▁▂▃▄▅▆▇█▇▆▅▄▃▁"
     #SPINNER="▖▘▝▗"
     #SPINNER="┤┘┴└├┌┬┐"
     #SPINNER="◢◣◤◥"
