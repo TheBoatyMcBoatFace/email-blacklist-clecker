@@ -523,12 +523,12 @@ if [ $VERBOSE -ge 0 ]; then
     else
         printf ""
     fi
-    printf "$HOSTNAME,"
+    printf "~hostname:$HOSTNAME,"
     printf "target:$TARGET,"
-    printf "%-15s," "Tested:";   echo "${COUNT}"
-    printf "%-15s," "Passed:";   echo "${GREEN}${PASSED}${CLEAR}"
-    printf "%-15s," "Invalid:";  echo "${YELLOW}${INVALID}${CLEAR}"
-    printf "%-15s," "Blacklisted:";  echo "${RED}${FAILED}${CLEAR}"
+    printf "Tested:${COUNT},"
+    printf "Passed:${GREEN}${PASSED}${CLEAR},"
+    printf "Invalid:${YELLOW}${INVALID}${CLEAR},"
+    printf "Blacklisted:${RED}${FAILED}${CLEAR}"
 
 fi
 
