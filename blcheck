@@ -66,6 +66,7 @@
         bl.spameatingmonkey.net
         bl.spamstinks.com
         black.junkemailfilter.com
+        black.dnsbl.brukalai.lt
         blackholes.five-ten-sg.com
         blacklist.sci.kun.nl
         blacklist.woody.ch
@@ -106,6 +107,7 @@
         fnrbl.fast.net
         fresh.spameatingmonkey.net
         hostkarma.junkemailfilter.com
+        http.dnsbl.sorbs.net
         images.rbl.msrbl.net
         ips.backscatterer.org
         ix.dnsbl.manitu.net
@@ -118,13 +120,16 @@
         mail-abuse.blacklist.jippg.org
         netbl.spameatingmonkey.net
         netscan.rbl.blockedservers.com
+        new.spam.dnsbl.sorbs.net
         no-more-funn.moensted.dk
         noptr.spamrats.com
         orvedb.aupads.org
+        old.spam.dnsbl.sorbs.net
         pbl.spamhaus.org
         phishing.rbl.msrbl.net
         pofon.foobar.hu
         psbl.surriel.com
+        recent.spam.dnsbl.sorbs.net
         rbl.abuse.ro
         rbl.blockedservers.com
         rbl.dns-servicios.com
@@ -140,6 +145,7 @@
         sbl.nszones.com
         sbl.spamhaus.org
         short.rbl.jp
+        socks.dnsbl.sorbs.net
         spam.dnsbl.anonmails.de
         spam.pedantic.org
         spam.rbl.blockedservers.com
@@ -161,12 +167,14 @@
         virus.rbl.msrbl.net
         vote.drbl.caravan.ru
         vote.drbl.gremlin.ru
+        web.dnsbl.sorbs.net
         web.rbl.msrbl.net
         work.drbl.caravan.ru
         work.drbl.gremlin.ru
         wormrbl.imp.ch
         xbl.spamhaus.org
         zen.spamhaus.org
+        zombie.dnsbl.sorbs.net
         	combined.mail.abusix.zone"
 
 
@@ -195,10 +203,10 @@
 
     # Define spinner
     #SPINNER="-\|/"
-    #SPINNER=".oO@*"
+    SPINNER=".oO@*"
     #SPINNER="▉▊▋▌▍▎▏▎▍▌▋▊▉"
     #SPINNER="←↖↑↗→↘↓↙"
-    SPINNER="▁▂▃▄▅▆▇█▇▆▅▄▃▁"
+    #SPINNER="▁▂▃▄▅▆▇█▇▆▅▄▃▁"
     #SPINNER="▖▘▝▗"
     #SPINNER="┤┘┴└├┌┬┐"
     #SPINNER="◢◣◤◥"
