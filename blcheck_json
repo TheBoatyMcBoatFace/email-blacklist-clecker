@@ -506,7 +506,7 @@ for BL in $BLACKLISTS; do
             printf "%s%sblacklisted (%s)%s\n" "$RED" "$PREFIX" "$RESPONSE" "$CLEAR";
         elif [ $VERBOSE -ge 0 ]; then
             if test -z "$PLAIN"; then printf "";
-            printf "";
+            printf "%s\n";
           fi
           # printf "%s%s%s : %s\n" "$RED" "$BL" "$CLEAR" "$RESPONSE";
            printf "$BL,"
@@ -523,23 +523,13 @@ if [ $VERBOSE -ge 0 ]; then
     else
         printf ""
     fi
-  #  echo "$HOSTNAME"
-  #  echo Results for "$TARGET"
-  #  echo
-  #  printf "%-15s" "Tested:";   echo "${COUNT}"
-  #  printf "%-15s" "Passed:";   echo "${GREEN}${PASSED}${CLEAR}"
-  #  printf "%-15s" "Invalid:";  echo "${YELLOW}${INVALID}${CLEAR}"
-  #  printf "%-15s" "Blacklisted:";  echo "${RED}${FAILED}${CLEAR}"
-#    echo "----------------------------------------------------------"
-# Print results in json??
-    echo '{
-              "droplet_name": "$HOSTNAME",
-              "target": "$TARGET",
-              "list_count_checked": "${COUNT}${CLEAR}",
-              "list_count_passed": "${PASSED}${CLEAR}",
-              "list_count_invalid": "${INVALID}${CLEAR}",
-              "list_count_failed": "${FAILED}${CLEAR}"
-            }'
+    printf "$HOSTNAME,"
+    printf "target:$TARGET,"
+    printf "%-15s," "Tested:";   echo "${COUNT}"
+    printf "%-15s," "Passed:";   echo "${GREEN}${PASSED}${CLEAR}"
+    printf "%-15s," "Invalid:";  echo "${YELLOW}${INVALID}${CLEAR}"
+    printf "%-15s," "Blacklisted:";  echo "${RED}${FAILED}${CLEAR}"
+
 fi
 
 exit $FAILED;
