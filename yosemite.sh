@@ -522,7 +522,7 @@ if [ $VERBOSE -ge 0 ]; then
     else
         printf ""
     fi
-    printf "]"
+    printf ""
 #    printf "~hostname:$HOSTNAME,"
 #	printf "\n"
 #    	printf "ipv4_public: $TARGET"
@@ -532,6 +532,7 @@ if [ $VERBOSE -ge 0 ]; then
 #    printf "Blacklisted:${RED}${FAILED}${CLEAR}"
 
 # Print Counts
+
 
 
 
