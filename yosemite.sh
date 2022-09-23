@@ -513,7 +513,7 @@ for BL in $BLACKLISTS; do
          # Print me before 
        #   { "Blacklists":
        #printf "{ "Blacklists":";
-          
+          printf "$BL,"
          #  printf "$BL,"
        #  printf "{ \"$BL\": true}"
           # printf "\n";
@@ -537,13 +537,13 @@ if [ $VERBOSE -ge 0 ]; then
 #	printf "\n"
 #    	printf "ipv4_public: $TARGET"
 
-	printf "{ "
-	printf "Tested: {${COUNT}}"
-	printf	"Passed: {${PASSED}}"
-	printf	"Invalid: {${INVALID}}"
-	printf	"Blacklisted: {${FAILED}}"
-	printf	"Blacklists: {$BL}"
-	printf  " }"
+#	printf "{ "
+#	printf "Tested: {${COUNT}}"
+#	printf	"Passed: {${PASSED}}"
+#	printf	"Invalid: {${INVALID}}"
+#	printf	"Blacklisted: {${FAILED}}"
+#	printf	"Blacklists: {$BL}"
+#	printf  " }"
 
   #  printf "Tested:${COUNT},"
    # printf "Passed:${GREEN}${PASSED}${CLEAR},"
