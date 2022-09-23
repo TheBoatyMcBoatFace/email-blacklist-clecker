@@ -509,8 +509,8 @@ for BL in $BLACKLISTS; do
             printf "";
           fi
           # printf "%s%s%s : %s\n" "$RED" "$BL" "$CLEAR" "$RESPONSE";
-          printf "{";
-           printf "\"blacklist\": \"$BL\",\r";
+          
+           printf "$BL,\r";
 
         fi
         FAILED=$((FAILED + 1))
@@ -525,7 +525,7 @@ if [ $VERBOSE -ge 0 ]; then
         printf ""
     fi
 #    printf "~hostname:$HOSTNAME,"
-    printf "\"ipv4_public\":%s\"$TARGET\"}\n"
+    printf "{ipv4_public: $TARGET}"
 #    printf "Tested:${COUNT},"
 #    printf "Passed:${GREEN}${PASSED}${CLEAR},"
 #    printf "Invalid:${YELLOW}${INVALID}${CLEAR},"
