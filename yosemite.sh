@@ -553,8 +553,11 @@ if [ $VERBOSE -ge 0 ]; then
 #	printf  " }"
 printf "**${COUNT}"
 printf "**${PASSED}"
-printf "**${PASSED}"
+printf "**${INVALID}"
 printf "**${FAILED}"
+
+
+
 
   #  printf "Tested:${COUNT},"
    # printf "Passed:${GREEN}${PASSED}${CLEAR},"
