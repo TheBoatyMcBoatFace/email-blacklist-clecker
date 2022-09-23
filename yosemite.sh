@@ -471,43 +471,18 @@ for BL in $BLACKLISTS; do
     # Not blacklisted
     if [ ! "$RESPONSE" ]; then
 
-        # Make sure the server is viable
-        ERROR=""
-        if [ "$VERIFY_BL" ]; then
-            TDL=$(echo "$BL" | grep -om 1 '\([a-zA-Z0-9]\+\(-[a-zA-Z0-9]\+\)*\.\)[a-zA-Z]\{2,\}$')
-            if [ ! "$(resolve "$TDL" ns)" ]; then
-                if test -z "$PLAIN"; then printf "\r"; fi
-                printf "%s%sUnreachable server%s\n" "$YELLOW" "$PREFIX" "$CLEAR";
-                INVALID=$((INVALID + 1))
-                ERROR=TRUE
-            fi
-        fi
+       
 
-        if [ ! "$ERROR" ]; then
-            if [ "$VERIFY_BL" ] || [ $VERBOSE -ge 1 ]; then
-                if test -z "$PLAIN"; then printf "\r"; fi
-                printf "%s%s✓%s\n" "$CLEAR" "$PREFIX" "$CLEAR";
-            fi
-            PASSED=$((PASSED + 1))
-        fi;
-
-    # Invalid response
-    elif [ "$START" != "127."  ]; then
-        if [ $VERBOSE -ge 1 ]; then
-            if test -z "$PLAIN"; then printf "\r"; fi
-            printf "%s%sinvalid response (%s)%s\n" "$YELLOW" "$PREFIX" "$RESPONSE" "$CLEAR";
-        fi;
-        INVALID=$((INVALID + 1))
-
-    # Blacklisted
+        # Blacklisted
     else
         if [ $VERBOSE -ge 1 ]; then
             if test -z "$PLAIN"; then printf ""; fi
             printf "%s%sblacklisted (%s)%s\n" "$RED" "$PREFIX" "$RESPONSE" "$CLEAR";
         elif [ $VERBOSE -ge 0 ]; then
-            if test -z "$PLAIN"; then printf "[";
+            if test -z "$PLAIN"; then printf "";
           
           fi
+        printf "["
           # printf "%s%s%s : %s\n" "$RED" "$BL" "$CLEAR" "$RESPONSE";
           
            printf "$BL,"
