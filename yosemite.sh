@@ -461,10 +461,7 @@ for BL in $BLACKLISTS; do
     fi
     
     
-    ## PREFIX PRINTING
     
-printf "{ "Blacklists":";
-
 
     # Get the status
     RESPONSE=$(resolve "$TEST")
@@ -504,10 +501,10 @@ printf "{ "Blacklists":";
     # Blacklisted
     else
         if [ $VERBOSE -ge 1 ]; then
-            if test -z "$PLAIN"; then printf "prefix2"; fi
+            if test -z "$PLAIN"; then printf ""; fi
             printf "%s%sblacklisted (%s)%s\n" "$RED" "$PREFIX" "$RESPONSE" "$CLEAR";
         elif [ $VERBOSE -ge 0 ]; then
-            if test -z "$PLAIN"; then printf "prefix3";
+            if test -z "$PLAIN"; then printf "";
           
           fi
           # printf "%s%s%s : %s\n" "$RED" "$BL" "$CLEAR" "$RESPONSE";
@@ -515,7 +512,7 @@ printf "{ "Blacklists":";
       
          # Print me before 
        #   { "Blacklists":
-       # "{ "Blacklists":"
+       printf "{ "Blacklists":";
           
          #  printf "$BL,"
          printf "{ \"$BL\": true}"
