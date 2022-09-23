@@ -510,7 +510,7 @@ for BL in $BLACKLISTS; do
           fi
           # printf "%s%s%s : %s\n" "$RED" "$BL" "$CLEAR" "$RESPONSE";
           
-           printf "$BL[*]"
+           printf "$BL,"
            printf "\n";
           
 
