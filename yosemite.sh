@@ -536,17 +536,24 @@ if [ $VERBOSE -ge 0 ]; then
 #    printf "~hostname:$HOSTNAME,"
 #	printf "\n"
 #    	printf "ipv4_public: $TARGET"
-    printf "Tested:${COUNT},"
-    printf "Passed:${GREEN}${PASSED}${CLEAR},"
-    printf "Invalid:${YELLOW}${INVALID}${CLEAR},"
-    printf "Blacklisted:${RED}${FAILED}${CLEAR},"
-    printf "/r/r"
+
+	printf "{ "
+	printf "Tested: {${COUNT}}"
+	printf	"Passed: {${PASSED}}"
+	printf	"Invalid: {${INVALID}}"
+	printf	"Blacklisted: {${FAILED}}"
+	printf	"Blacklists: {$BL}"
+	printf  " }"
+
+  #  printf "Tested:${COUNT},"
+   # printf "Passed:${GREEN}${PASSED}${CLEAR},"
+   # printf "Invalid:${YELLOW}${INVALID}${CLEAR},"
+   # printf "Blacklisted:${RED}${FAILED}${CLEAR},"
+   # printf "/r/r"
 
 # Print Counts
 
-printf "$BL,/r"
-
-
+# printf "$BL,/r"
 
 fi
 
