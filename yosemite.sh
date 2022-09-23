@@ -551,10 +551,14 @@ if [ $VERBOSE -ge 0 ]; then
 #	printf	"Blacklisted: {${FAILED}}"
 #	printf	"Blacklists: {$BL}"
 #	printf  " }"
+printf "**${COUNT}"
+printf "**${PASSED}"
+printf "**${PASSED}"
 printf "**${FAILED}"
+
   #  printf "Tested:${COUNT},"
    # printf "Passed:${GREEN}${PASSED}${CLEAR},"
-   # printf "Invalid:${YELLOW}${INVALID}${CLEAR},"
+   # printf "Invalid:${YELLOW}${PASSED}${CLEAR},"
    # printf "Blacklisted:${RED}${FAILED}${CLEAR},"
    # printf "/r/r"
 
