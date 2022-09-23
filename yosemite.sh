@@ -289,10 +289,8 @@
     showHelp() {
         cat <<HELP
 blcheck [options] <domain_or_IP>
-
 Supplied domain must be full qualified domain name.
 If the IP is supplied, the PTR check cannot be executed and will be skipped.
-
 -d dnshost  Use host as DNS server to make lookups
 -l file     Load blacklists from file, separated by space or new line
 -c          Warn if the top level domain of the blacklist has expired
@@ -300,10 +298,8 @@ If the IP is supplied, the PTR check cannot be executed and will be skipped.
 -q          Quiet modem with absolutely no output (useful for scripts)
 -p          Plain text output (no coloring, no interactive status)
 -h          The help you are just reading
-
 Result of the script is the number of blacklisted entries. So if the supplied
 IP is not blacklisted on any of the servers the result is 0.
-
 HELP
         exit;
     }
@@ -505,10 +501,9 @@ for BL in $BLACKLISTS; do
             if test -z "$PLAIN"; then printf ""; fi
             printf "%s%sblacklisted (%s)%s\n" "$RED" "$PREFIX" "$RESPONSE" "$CLEAR";
         elif [ $VERBOSE -ge 0 ]; then
-            if test -z "$PLAIN"; then printf "";
+            if test -z "$PLAIN"; then printf "[";
           
           fi
-          printf "["
           # printf "%s%s%s : %s\n" "$RED" "$BL" "$CLEAR" "$RESPONSE";
           
            printf "$BL,"
