@@ -516,7 +516,7 @@ for BL in $BLACKLISTS; do
        
        
        
-    #      printf "$BL,"
+          printf "$BL,"
           
           
           
@@ -551,7 +551,7 @@ if [ $VERBOSE -ge 0 ]; then
 #	printf	"Blacklisted: {${FAILED}}"
 #	printf	"Blacklists: {$BL}"
 #	printf  " }"
-printf "${FAILED}"
+printf "**${FAILED}"
   #  printf "Tested:${COUNT},"
    # printf "Passed:${GREEN}${PASSED}${CLEAR},"
    # printf "Invalid:${YELLOW}${INVALID}${CLEAR},"
