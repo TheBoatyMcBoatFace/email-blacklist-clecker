@@ -459,6 +459,12 @@ for BL in $BLACKLISTS; do
             progress "$I" "$COUNT"
         fi
     fi
+    
+    
+    ## PREFIX PRINTING
+    
+printf "{ "Blacklists":";
+
 
     # Get the status
     RESPONSE=$(resolve "$TEST")
@@ -498,17 +504,24 @@ for BL in $BLACKLISTS; do
     # Blacklisted
     else
         if [ $VERBOSE -ge 1 ]; then
-            if test -z "$PLAIN"; then printf ""; fi
+            if test -z "$PLAIN"; then printf "prefix2"; fi
             printf "%s%sblacklisted (%s)%s\n" "$RED" "$PREFIX" "$RESPONSE" "$CLEAR";
         elif [ $VERBOSE -ge 0 ]; then
-            if test -z "$PLAIN"; then printf "[";
+            if test -z "$PLAIN"; then printf "prefix3";
           
           fi
           # printf "%s%s%s : %s\n" "$RED" "$BL" "$CLEAR" "$RESPONSE";
           
-           printf "$BL,"
-           printf "\n";
+      
+         # Print me before 
+       #   { "Blacklists":
+       # "{ "Blacklists":"
           
+         #  printf "$BL,"
+         printf "{ \"$BL\": true}"
+           printf "\n";
+  
+#   		{ "Blacklists": { "$BL": true} }
 
         fi
         FAILED=$((FAILED + 1))
@@ -522,7 +535,7 @@ if [ $VERBOSE -ge 0 ]; then
     else
         printf ""
     fi
-    printf ""
+    printf "}"
 #    printf "~hostname:$HOSTNAME,"
 #	printf "\n"
 #    	printf "ipv4_public: $TARGET"
