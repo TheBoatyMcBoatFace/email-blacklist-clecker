@@ -175,7 +175,7 @@
         xbl.spamhaus.org
         zen.spamhaus.org
         zombie.dnsbl.sorbs.net
-        	combined.mail.abusix.zone"
+        combined.mail.abusix.zone"
 
 
 #~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ }
@@ -510,7 +510,9 @@ for BL in $BLACKLISTS; do
           fi
           # printf "%s%s%s : %s\n" "$RED" "$BL" "$CLEAR" "$RESPONSE";
           
-           printf "$BL,\r";
+           printf "$BL[*]"
+           printf "\n";
+          
 
         fi
         FAILED=$((FAILED + 1))
@@ -525,7 +527,8 @@ if [ $VERBOSE -ge 0 ]; then
         printf ""
     fi
 #    printf "~hostname:$HOSTNAME,"
-    printf "{ipv4_public: $TARGET}"
+#	printf "\n"
+#    	printf "ipv4_public: $TARGET"
 #    printf "Tested:${COUNT},"
 #    printf "Passed:${GREEN}${PASSED}${CLEAR},"
 #    printf "Invalid:${YELLOW}${INVALID}${CLEAR},"
